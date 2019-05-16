@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Creacion de Plugin</title>
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="js/grpalerte.00.1.js"></script>
+</head>
+<link href="css/grpalerte.00.1.css" rel="stylesheet"  >
+
+<script>
+ $(document).ready(function() { 
+ 
+    var par = {mensaje:"Guillermo"};
+      $( "#doc" ).grpAlert(par);
+    //$('#doc').tooltip('show'); 
+      $("#mcarga").click( function() {  $('#doc').grpAlert('cargando'); ;  });
+      $("#mshow").click( function() {  $('#doc').grpAlert('show');  });
+      $("#mhide").click( function() {  $('#doc').grpAlert('hide');    });
+      $("#mshowp").click( function() {  $('#doc').grpAlert('show',{mensaje:"Envio de Parametros"}); ;  });
+     });  
+ 
+</script>
+<body>
+<h1> Plugin grpAlert</h1>
+  <div id="doc"></div>
+
+  <input id="mcarga" type="button" value="Cargando">
+  <input id="mhide" type="button" value="hide">
+  <input id="mshow" type="button" value="show">
+  <input id="mshowp" type="button" value="show Parametros">
+</body>
+</html>
